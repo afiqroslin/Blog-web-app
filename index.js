@@ -8,9 +8,12 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+// Post array
+const posts = [];
 
-    res.render("index.ejs")
+// Home page
+app.get("/", (req, res) => {
+  res.render("index.ejs", { posts: posts});
   });
 
 app.post("/submit", (req, res) => {
@@ -26,3 +29,4 @@ app.get("/post", (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
+

@@ -17,3 +17,9 @@ body{
     color: black;
     font-weight: bolder;
 }
+
+#copyright {
+    text-align: center;
+    font-size: large;
+  }
+  
