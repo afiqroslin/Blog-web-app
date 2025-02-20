@@ -13,7 +13,7 @@
    
     <section id="title">
       <div class="container py-5 d-flex justify-content-center">
-        <form action="/submit" method="POST" class="d-flex py-5" role="search">
+        <form action="/" method="GET" class="d-flex py-5" role="search">
           <input class="form-control me-2" type="search" placeholder="Explore more topics!" aria-label="Search" style="width: 400px;">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
@@ -27,9 +27,9 @@
 
         <div class="container py-5">
         <div class="row d-flex justify-content-center align-items-center">
-              <!-- Rounded Text Box -->
+
               <div class="col-auto">
-                    <div class="rounded-5 d-flex flex-column justify-content-center" style="width: 700px; height: 500px; background-color: #ccc; padding: 50px; text-align: justify;">
+                    <div class="rounded-5 d-flex flex-column justify-content-center" style="width: 700px; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
                         <h1>Lorem Ipsum</h1>
                         <p>
                             What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -39,10 +39,36 @@
                     </div>     
               </div>
           
-              <!-- Rounded Placeholder for Image with a gap between the two -->
               <div class="col-auto ms-3">
                 <div class="rounded-5" style="width: 400px; height: 400px; background-color: #ccc;"></div>
               </div>
+          </div>
+        </div>
+
+        <div class="container py-5">
+          <div class="row d-flex justify-content-center align-items-center">
+          <% posts.forEach( (post) => { %>
+
+            <div class="container py-5">
+              <div class="row d-flex justify-content-center align-items-center">
+
+                    <div class="col-auto">
+                          <div class="rounded-5 d-flex flex-column justify-content-center" style="width: 700px; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
+                              <h1><%= post.title %></h1>
+                              <h5><%= post.date %></h5>
+                              <p><%= post.content %></p>
+                          </div>     
+                    </div>
+                
+                    
+                    <div class="col-auto ms-3">
+                      <div class="rounded-5" style="width: 400px; height: 400px; background-color: #ccc;"></div>
+                    </div>
+                </div>
+              </div>
+              
+            <% }); %>
+          </div>
           </div>
         </div>
     </section>
