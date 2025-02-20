@@ -2,9 +2,14 @@
 
 <div class="container py-5 d-flex flex-column align-items-center">
     <div class="blog-post">
-        <form id="postForm" class="mb-4" action="/posts" method="POST">
+        <form id="postForm" class="mb-4" action="/posts" method="POST" >
             <label for="title">Post title:</label>
-            <input type="text" id="btitle" name="btitle" required minlength="3" class="form-control mb-2">
+            <input 
+                type="text" 
+                id="btitle" 
+                name="btitle" 
+                required minlength="3" 
+                class="form-control mb-2">
             
             <label for="content">Post content:</label>
             <input 
@@ -14,6 +19,14 @@
                 required minlength="3" 
                 class="form-control mb-2" 
                 style="width: 1000px; height: 300px;">
+
+            <label for="image">Upload Image: </label>
+            <input 
+                type="file" 
+                id="bimage" 
+                name="bimage" 
+                class="form-control mb-2" 
+                name="uploaded_file">
             
             <button type="submit" value="POST" class="btn btn-primary">POST</button>
         </form>

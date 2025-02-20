@@ -26,14 +26,16 @@ app.get("/post", (req, res) => {
 // Submit posts
 app.post("/posts", (req, res) => {
 
-  const { btitle, bcontent } = req.body;
+  const { btitle, bcontent, bimage } = req.body;
 
   const newPost = {
     title: btitle,
     content: bcontent,
+    image: bimage,
     date: new Date().toLocaleString(),
   };
 
+  console.log(bimage);
   posts.push(newPost);
 
   res.redirect("/");
