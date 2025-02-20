@@ -41,6 +41,15 @@ app.post("/posts", (req, res) => {
   res.redirect("/");
 });
 
+// Delete posts
+app.delete("/:id", (req, res) => {
+  const {id} = req.params;
+
+  posts.splice(id, 1);
+  res.sendStatus(200);
+
+});
+
 
 
 app.listen(port, () => {

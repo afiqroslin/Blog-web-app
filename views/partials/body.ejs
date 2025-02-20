@@ -16,7 +16,7 @@
 
     <section id = "posts">
 
-        <div class="container py-5 mt-5">
+        <div class="container py-5">
         <div class="row d-flex justify-content-center align-items-center">
 
               <div class="col-auto">
@@ -44,9 +44,9 @@
 
         <div class="container py-5">
           <div class="row d-flex justify-content-center align-items-center">
-          <% posts.forEach( (post) => { %>
+          <% posts.forEach( (post, index) => { %>
 
-            <div class="container py-5">
+            <div class="container py-5" id="post_<%= index %>">
               <div class="row d-flex justify-content-center align-items-center">
 
                     <div class="col-auto">
@@ -55,8 +55,13 @@
                               <h5><%= post.date %></h5>
                               <p><%= post.content %></p>
                               <!-- <div class="d-flex justify-content-center align-items-center">
-                                <img src="<%= post.content %>" width="500" height="600">
+                                <img src="" width="500" height="600">
                               </div> -->
+                              <div class="buttons">
+                                <button class="delete-btn rounded-5" onclick="deletePost(<%= index %>)">
+                                  Delete
+                                </button>
+                              </div>
                          </div>     
                     </div>
               
@@ -68,7 +73,6 @@
           </div>
         </div>
     </section>
-
 
 </body>
 </html>
