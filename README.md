@@ -13,16 +13,18 @@ Clone and install the project:
   node index.js
 ```
 
+
+
 Open browser and surf http://localhost:3000.
 
-![Home Page](images/Hompage.jpg)
+![Home Page](images/Homepage.JPG)
 
 
-![New Post](images/Post_page.jpg)
+![New Post](images/Post_page.JPG)
 
 
-![Submit Post](images/Submit_post.jpg)
+![Submit Post](images/Submit_post.JPG)
 
 
-![Edit Blogs](images/View.jpg)
+![Edit Blogs](images/View.JPG)
 
