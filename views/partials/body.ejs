@@ -20,7 +20,7 @@
         <div class="row d-flex justify-content-center align-items-center">
 
               <div class="col-auto">
-                    <div class="rounded-5 d-flex flex-column justify-content-center" style="width: 1200px; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
+                    <div class="rounded-5 d-flex flex-column justify-content-center" style="width: auto; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
                         <h1>Key Pillars for Data Cybersecurity</h1>
                         <h5>20/02/2025, 9:10:32 pm</h5>
                         <p>
@@ -34,7 +34,7 @@
                             </ul>
                         </p>
                         <div class="d-flex justify-content-center align-items-center pt-3">
-                          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg">
+                          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" class="img-fluid">
                         </div>
                     </div>     
               </div>
@@ -50,12 +50,12 @@
               <div class="row d-flex justify-content-center align-items-center">
 
                     <div class="col-auto">
-                          <div class="rounded-5 d-flex flex-column justify-content-center" style="width: 1200px; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
+                          <div class="rounded-5 d-flex flex-column justify-content-center" style="width: auto; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
                               <h1><%= post.title %></h1>
                               <h5><%= post.date %></h5>
                               <p><%= post.content %></p>
                               <div class="d-flex justify-content-center align-items-center">
-                                <img src="<%= post.image %>" width="800px" height="auto">
+                                <img src="<%= post.image %>" class="img-fluid" style="max-width: 800px;">
                               </div>
                               <div class="buttons">
                                 <button class="delete-btn rounded-5" onclick="deletePost(<%= index %>)">
