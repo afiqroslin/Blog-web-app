@@ -16,11 +16,11 @@
 
     <section id = "posts">
 
-        <div class="container py-5">
-        <div class="row d-flex justify-content-center align-items-center">
+        <div class="container-fluid py-5">
+        <div class="row">
 
-              <div class="col-auto">
-                    <div class="rounded-5 d-flex flex-column justify-content-center" style="width: auto; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
+              <div class="col-md-12 d-flex align-items-center justify-content-center">
+                    <div id="content" class="rounded-5 d-flex flex-column justify-content-center">
                         <h1>Key Pillars for Data Cybersecurity</h1>
                         <h5>20/02/2025, 9:10:32 pm</h5>
                         <p>
@@ -38,40 +38,29 @@
                         </div>
                     </div>     
               </div>
-          
-          </div>
+
+              <% posts.forEach( (post, index) => { %>
+              <div class="col-md-12 pt-5 d-flex align-items-center justify-content-center" id="post_<%= index %>">
+
+                    <div id="content" class="rounded-5 d-flex flex-column justify-content-center">
+                      <h1><%= post.title %></h1>
+                      <h5><%= post.date %></h5>
+                      <p><%= post.content %></p>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <img src="<%= post.image %>" class="img-fluid">
+                      </div>
+                      <div class="buttons">
+                        <button class="delete-btn rounded-5" onclick="deletePost(<%= index %>)">
+                          Delete
+                        </button>
+                      </div>
+                    </div>     
+                  </div>
+              <% }); %>
+              
+        </div>
         </div>
 
-        <div class="container py-5">
-          <div class="row d-flex justify-content-center align-items-center">
-          <% posts.forEach( (post, index) => { %>
-
-            <div class="container py-5" id="post_<%= index %>">
-              <div class="row d-flex justify-content-center align-items-center">
-
-                    <div class="col-auto">
-                          <div class="rounded-5 d-flex flex-column justify-content-center" style="width: auto; height: auto; background-color: #ccc; padding: 50px; text-align: justify;">
-                              <h1><%= post.title %></h1>
-                              <h5><%= post.date %></h5>
-                              <p><%= post.content %></p>
-                              <div class="d-flex justify-content-center align-items-center">
-                                <img src="<%= post.image %>" class="img-fluid" style="max-width: 800px;">
-                              </div>
-                              <div class="buttons">
-                                <button class="delete-btn rounded-5" onclick="deletePost(<%= index %>)">
-                                  Delete
-                                </button>
-                              </div>
-                         </div>     
-                    </div>
-              
-                </div>
-              </div>
-              
-            <% }); %>
-          </div>
-          </div>
-        </div>
     </section>
 
 </body>
