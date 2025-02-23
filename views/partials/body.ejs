@@ -20,7 +20,7 @@
         <div class="row">
 
               <div class="col-md-12 d-flex align-items-center justify-content-center">
-                    <div id="content" class="rounded-5 d-flex flex-column justify-content-center">
+                    <div id="postcontent" class="rounded-5 d-flex flex-column justify-content-center">
                         <h1>Key Pillars for Data Cybersecurity</h1>
                         <h5>20/02/2025, 9:10:32 pm</h5>
                         <p>
@@ -42,11 +42,11 @@
               <% posts.forEach( (post, index) => { %>
               <div class="col-md-12 pt-5 d-flex align-items-center justify-content-center" id="post_<%= index %>">
 
-                    <div id="content" class="rounded-5 d-flex flex-column justify-content-center">
+                    <div id="postcontent" class="rounded-5 d-flex flex-column justify-content-center">
                       <h1><%= post.title %></h1>
                       <h5><%= post.date %></h5>
                       <p><%= post.content %></p>
-                      <div class="d-flex justify-content-center align-items-center">
+                      <div class="d-flex justify-content-center align-items-center pb-3">
                         <img src="<%= post.image %>" class="img-fluid">
                       </div>
                       <div class="buttons">
