@@ -1,3 +1,9 @@
+
+
+$(function() {
+  $("#headertitle").slideDown(1000);
+  $("#posts").hide().slideDown(1500);
+});
 // delete post script
 
 function deletePost(index) {
@@ -14,3 +20,4 @@ function deletePost(index) {
       })
       .catch((error) => console.error(error));
   }
+
