@@ -2,7 +2,6 @@
 
 $(function() {
   $("#headertitle").slideDown(1000);
-  $("#posts").hide().slideDown(1500);
 });
 // delete post script
 
