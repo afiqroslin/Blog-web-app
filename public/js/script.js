@@ -20,3 +20,6 @@ function deletePost(index) {
       .catch((error) => console.error(error));
   }
 
+  function viewPost(index) {
+    window.location.href = `/view/${index}`; // Redirect to a dynamic route
+  }

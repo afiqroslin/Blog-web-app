@@ -60,11 +60,24 @@ app.post("/posts", upload.single("bimage"), (req, res) => {
 });
 
 
+
+// View post
+app.get('/view/:id', (req, res) => {
+
+  const {id} = req.params;
+  const viewpost = posts[id]
+
+  console.log(posts[id]);
+  res.render("view.ejs", { viewpost });
+ 
+});
+
 // Delete posts
 app.delete("/:id", (req, res) => {
   const {id} = req.params;
 
   posts.splice(id, 1);
+  console.log(id);
   res.sendStatus(200);
 
 });

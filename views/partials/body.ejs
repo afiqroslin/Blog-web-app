@@ -48,11 +48,19 @@
                       <div class="d-flex justify-content-center align-items-center pb-3">
                         <img src="<%= post.image %>" class="img-fluid">
                       </div>
-                      <div class="buttons">
-                        <button class="delete-btn rounded-5" onclick="deletePost(<%= index %>)">
-                          Delete
-                        </button>
-                      </div>
+
+                      <div class="row">
+                        <div class="buttons col-md-1">
+                          <button class="delete-btn rounded-5" onclick="deletePost(<%= index %>)">
+                            Delete
+                          </button>
+                        </div>
+                        <div class="buttons col-md-1">
+                          <button class="view-btn rounded-5" onclick="viewPost(<%= index %>)">
+                            View
+                          </button>
+                        </div>
+                    </div>
                     </div>     
                   </div>
               <% }); %>
