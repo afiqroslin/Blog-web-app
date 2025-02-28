@@ -69,7 +69,7 @@ app.get('/:id', (req, res) => {
   const viewpost = posts[id]
 
   console.log(posts[id]);
-  res.render("view.ejs", { viewpost });
+  res.render("view.ejs", { viewpost, id });
  
 });
 
@@ -78,7 +78,6 @@ app.delete("/:id", (req, res) => {
   const {id} = req.params;
 
   posts.splice(id, 1);
-  console.log(id);
   res.sendStatus(200);
 
 });

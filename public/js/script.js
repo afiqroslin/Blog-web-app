@@ -15,7 +15,7 @@ function deletePost(index) {
           throw new Error("Failed to delete post");
         }
         
-        location.reload();
+        window.location.href = "/"; // Redirect to home page
       })
       .catch((error) => console.error(error));
   }
