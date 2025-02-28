@@ -6,6 +6,7 @@ import path from "path";
 const app = express();
 const port = 3000;
 
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -62,7 +63,7 @@ app.post("/posts", upload.single("bimage"), (req, res) => {
 
 
 // View post
-app.get('/view/:id', (req, res) => {
+app.get('/:id', (req, res) => {
 
   const {id} = req.params;
   const viewpost = posts[id]

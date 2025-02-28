@@ -21,6 +21,6 @@ function deletePost(index) {
   }
 
   function viewPost(index) {
-    window.location.href = `/view/${index}`; // Redirect to a dynamic route
+    window.location.href = `/${index}`; // Redirect to a dynamic route
     
   }

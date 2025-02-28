@@ -1,11 +1,29 @@
+
 <%- include("partials/header.ejs")%>
 
-<% if (viewpost) { %>
-    <h1><%= viewpost.title %></h1>
-    <h5><%= viewpost.date %></h5>
-    <p><%= viewpost.content %></p>
-<% } else { %>
-    <h1>Post not found</h1>
-<% } %>
+<div class="col-md-12 pt-5 d-flex align-items-center justify-content-center">
+
+    <div id="postcontent" class="rounded-5 d-flex flex-column justify-content-center">
+      <h1><%= viewpost.title %></h1>
+      <h5><%= viewpost.date %></h5>
+      <p><%= viewpost.content %></p>
+      <div class="d-flex justify-content-center align-items-center pb-3">
+        <img src="<%= viewpost.image %>" class="img-fluid">
+      </div>
+
+      <!-- <div class="row">
+        <div class="buttons col-md-1">
+          <button class="delete-btn rounded-5" onclick="deletePost()">
+            Delete
+          </button>
+        </div>
+        <div class="buttons col-md-1">
+          <button class="view-btn rounded-5" onclick="viewPost()">
+            View
+          </button>
+        </div>
+    </div> -->
+    </div>     
+  </div>
 
 <%- include("partials/footer.ejs") %>
