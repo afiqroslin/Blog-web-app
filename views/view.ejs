@@ -1,4 +1,11 @@
 <%- include("partials/header.ejs")%>
 
+<% if (viewpost) { %>
+    <h1><%= viewpost.title %></h1>
+    <h5><%= viewpost.date %></h5>
+    <p><%= viewpost.content %></p>
+<% } else { %>
+    <h1>Post not found</h1>
+<% } %>
 
 <%- include("partials/footer.ejs") %>
