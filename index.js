@@ -34,6 +34,10 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { posts: posts});
   });
 
+app.get("/contact", (req, res) => {
+  res.render("contact.ejs");
+  });  
+
 // Post page
 app.get("/post", (req, res) => {
 
@@ -61,7 +65,6 @@ app.post("/posts", upload.single("bimage"), (req, res) => {
 });
 
 
-
 // View post
 app.get('/:id', (req, res) => {
 
@@ -81,6 +84,7 @@ app.delete("/:id", (req, res) => {
   res.sendStatus(200);
 
 });
+
 
 
 app.listen(port, () => {
